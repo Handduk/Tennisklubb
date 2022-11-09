@@ -1,0 +1,92 @@
+body{
+    background-color: gray;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.menu{
+    background-color: gray;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+.bokabastu{
+    width: 33%;
+    font-size: 20px;
+}
+.omklädningsrum{
+    width: 33%;
+    font-size: 20px;
+}
+.kalender{
+    width: 33%;
+    font-size: 20px;
+}
+
+.bild>img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.välkommen{
+    width: 500px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    font-size: 40px;
+    color:rgba(0, 0, 0, 0.8);
+    text-align:center;
+}
+.slogan{
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    font-size: 20px;
+    color:rgba(0, 0, 0, 0.800);
+    text-align:center;
+}
+.boka-tid{
+    display: flex;
+    position:absolute;
+    text-align: center;
+    top: 450px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    background-color: rgba(255, 0, 0, 0.65);
+    border-color: rgba(255, 255, 255, 0);
+    border-radius: 10%;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+    color: black;
+    padding: 0.5em;
+}
+
+a:hover{
+    color: rgba(0, 0, 0, 0.5);
+    border-style: solid;
+    border-color: red;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+.boka-tid> a:hover{
+    border-top: 0px;
+}
+.om{
+    text-align: center;
+}
+.anl{
+    text-align: center;
+}
