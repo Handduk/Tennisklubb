@@ -1,121 +1,114 @@
-body{
-    background-color: gray;
-    color: rgb(0, 0, 0);
+*{
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.flex-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: gray;
-    padding:10px;
-
-}
-@media (max-width: 768px) {
-    .flex-container{
-        flex-direction: column;
-    }
-}
-.flex-item{
-
-    font-size: 20px;
-    text-align: center;
-    padding: 1px;
-
-}
-
-
-.bild-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 500px;
-    background-image: url('https://assets.website-files.com/616fca7b4fdcccc4f4e617ba/617131f37b84717ef5c1eb4e_Tennis_Webb_racket-2048x1762.jpg');
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
 }
 .header{
-    padding: 60px;
-    text-align: center;
-    top:300px;
-    color: black;
-
-}
-.bild-item{
-    position:absolute;
-    text-align: center;
-    top: 450px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-style: solid;
-    background-color: rgba(255, 0, 0, 0.65);
-    border-color: rgba(255, 255, 255, 0);
-    border-radius: 10%;
-    max-width: 200px;
-    font-weight: 700;
-    font-size: 20px;
-    box-sizing: border-box;
-}
-.bild-item>a:link,a:hover{
-    text-decoration: none;
-}
-.col-6{
-    position: absolute;
-    top: 200px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: 600;
-    font-size: 20px;
-    color:rgba(0, 0, 0, 0.800);
-    text-align:center;
-    box-sizing: border-box;
-}
-.col-7{
-    position:absolute;
-    text-align: center;
-    top: 450px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-style: solid;
-    background-color: rgba(255, 0, 0, 0.65);
-    border-color: rgba(255, 255, 255, 0);
-    border-radius: 10%;
-    max-width: 200px;
-    font-weight: 700;
-    font-size: 20px;
-    box-sizing: border-box;
-}
-
-a:link, a:visited{
-    text-decoration: underline;
-    color: black;
-    padding: 0.5em;
-}
-
-a:hover{
-    color: rgba(255, 255, 255, 0.5);
-    padding: 10px;
-}
-.col-7> a:hover{
-    border-top: 0px;
-}
-.om{
-    text-align: center;
-}
-.anl{
-    text-align: center;
-}
-.col-1{
-    background-color: white;
-    color: #000;
-    text-align: center;
-    font-size: 15px;
-    padding: 15px;
-    box-sizing: border-box;
-}
-[class*="col-"]{
+    min-height: 100vh;
     width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(bilder/front-page.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #e2001a;
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.header-text{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.header-text h1{
+    font-size: 62px;
+}
+.header-text p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: white;
+}
+.bokning-knapp{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: #e2001a;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 12px 34px;
+    font-size: 13px;
+    position: relative;
+    cursor: pointer;
+}
+.bokning-knapp:hover{
+    border: 1px solid #fff;
+    color: black;
+    background: #c3ff009a;
+    transition: 1s;
+}
+
+nav .fa-solid{
+    display: none;
+}
+
+@media(max-width: 700px){
+    .header-text h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #e2001a;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+    nav .fa-solid{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
 }
