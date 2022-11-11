@@ -12,8 +12,8 @@
         <section class="header">
             <nav>
                 <a href="index.html"><img src="bilder/logo.png" alt="logo"></a>
-                <div class="nav-links">
-                    <i class="fa-solid fa-xmark"></i>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
                     <ul>
                         <li><a href="index.html">HEM</a></li>
                         <li><a href="om-oss.html">OM OSS</a></li>
@@ -21,7 +21,7 @@
                         <li><a href="webbshop.html">WEBBSHOP</a></li>
                     </ul>
                 </div>
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars" onclick="showMenu()"></i>
             </nav>
 
     <div class="header-text">
@@ -31,5 +31,45 @@
     </div>
 
         </section>
+
+        <section class="info">
+            <h1>Våra banor</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+            <div class="rad">
+                <div class="info-column">
+                    <h3>Gräs</h3>
+                    <p>En snabbare bana för dig som tycker att det går för långsamt på våra andra banor. Gräset klipps varannan dag för bästa möjliga längd
+                        och kollas över vid stängning samt runt lunch för att våran hall ska hålla den bästa möjliga kvalité för våra spelare.
+                    </p>
+                </div>
+                <div class="info-column">
+                    <h3>Hardcourt</h3>
+                    <p>Våran Hardcourt bana är ett perfekt mellanting, för dig som tycker grus är för långsamt men gräs är för snabbt, banan ligger i mitten av anläggningen och har bäst belysning av dem tre.</p>
+                </div>
+                <div class="info-column">
+                    <h3>Grus</h3>
+                    <p>Den populäraste banan i våran anläggning. Grus är perfekt för dig som gillar det lite långsammare. Vi fixar till gruset vid stängning och vid lunch. </p>
+                </div>
+            </div>
+
+        </section>
+        <!--Våra banor-->
+        <section class="våra-banor">
+            <h1>V</h1>
+        </section>
+            <!--JavaScript för mobilmenyn-->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+
     </body>
 </html>

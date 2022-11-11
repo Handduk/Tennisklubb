@@ -1,0 +1,96 @@
+/*Index*/
+body{
+margin:0;
+background-color: rgb(255, 255, 255);
+color: black;
+height: 1000px;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+.menu{
+    
+    color: rgb(0, 0, 0);
+    width: 100%;
+    border-style: solid;
+    border-top: 0px;
+    border-left:0px;
+    border-right: 0px;
+    
+}
+.bild>img{
+width: 100%;
+height: 100%;
+background-size: cover;
+object-fit:none;
+
+}
+.bild{
+    height: 500px;
+}
+.välkommen{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    font-size: 4vw;
+    color: black;
+    text-align:center;
+}
+.slogan{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    font-size: 2vw;
+    color:rgb(0, 0, 0);
+    text-align:center;
+}
+.boka-tid{
+    display: flex;
+    position:absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    background-color: yellow;
+    border-color: yellow;
+    border-radius: 10%;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+    color:black;
+    padding: 1em;
+    display: inline-block;
+    
+}
+
+a:hover{
+    color: rgba(0, 0, 0, 0.498);
+}
+a:active{
+    text-decoration: none;
+    color:white;
+}
+.om{
+    text-align: center;
+}
+.break{
+    height: 200px;
+}
+.anl{
+    text-align: center;
+}
+/*omkl*/
+.info{
+    text-align: center;
+    
+}
+/*Bokning*/
+.bokning{
+    font-size: 2vw;
+    text-align: center;
+}

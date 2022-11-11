@@ -4,7 +4,7 @@
     font-family: 'Oswald', sans-serif;
 }
 .header{
-    min-height: 100vh;
+    min-height: 50vh;
     width: 100%;
     background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(bilder/front-page.jpg);
     background-position: center;
@@ -80,7 +80,7 @@ nav img{
     border: 1px solid #fff;
     color: black;
     background: #c3ff009a;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 nav .fa-solid{
@@ -98,17 +98,69 @@ nav .fa-solid{
         position: absolute;
         background: #e2001a;
         height: 100vh;
-        width: 200px;
+        width: 150px;
         top: 0;
-        right: 0;
+        right: -200px;
         text-align: left;
         z-index: 2;
+        transition: 0.5s;
     }
+
     nav .fa-solid{
         display: block;
         color: white;
         margin: 10px;
         font-size: 22px;
         cursor: pointer;
+    }
+    .nav-links ul{
+        padding:30px;
+    }
+}
+
+/*Info*/
+.info{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.rad{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.info-column{
+    flex-basis: 31%;
+    background: rgba(255, 167, 167, 0.455);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.info-column:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+@media(max-width: 700px){
+    .rad{
+        flex-direction: column;
     }
 }
