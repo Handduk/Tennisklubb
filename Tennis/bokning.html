@@ -1,13 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Vasastadens Tennisklubb | Bokning</title>
+    <link rel="stylesheet" href="style2.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/b25a182c0f.js" crossorigin="anonymous"></script>
-    <title>Vasastadens Tennisklubb | Bokning</title>
 </head>
 <body>
-    
-</body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="bilder/logo.png" alt="logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HEM</a></li>
+                    <li><a href="om-oss.html">OM OSS</a></li>
+                    <li><a href="hitta-hit.html">HITTA HIT</a></li>
+                    <li><a href="webbshop.html">WEBBSHOP</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+<div class="header-text">
+    <h1>Boka bana osv</h1>
+    <p>Välj bland våra populära banor....</p>
+</div>
+    </section>
+    <section class="forms">
+        <form action="/action_page.php">
+            <fieldset>
+                <legend>Boka bana</legend>
+                <label for="bana">Välj bana:</label>
+                <select id="bana" name="bana">
+                    <option value="gräs">Gräs</option>
+                    <option value="grus">Grus</option>
+                    <option value="hardCourt">HardCourt</option>
+                </select><br>
+                <label for="datum">Datum:</label>
+                <input type="date" id="datum" name="datum">
+                <br>
+                <label for="tid">Tid:</label>
+                <input type="time" id="tid" name="tid">
+                <br>
+                <label for="fnamn">Förnamn:</label>
+                <input type="text" id="fnamn" name="fnamn" placeholder="Anders" size="15">
+                <br>
+                <label for="enamn">Efternamn:</label>
+                <input type="text" id="enamn" name="enamn" placeholder="Andersson" size="15">
+                <br>
+                <label for="nummer">TelNummer:</label>
+                <input type="tel" id="nummer" name="nummer" placeholder="123 456 7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="12">
+            </fieldset>
+            <br>
+            <fieldset class="extra">
+                <legend>Extra</legend>
+                <input type="checkbox" id="extra1" name="extra1" value="bastu">
+                <label for="extra1"> Boka bastu </label>
+                <input type="checkbox" id="extra2" name="extra2" value="omklh">
+                <label for="extra2"> Boka omklädningsrum herr </label>
+                <input type="checkbox" id="extra3" name="extra3" value="omkld">
+                <label for="extra3"> Boka omklädningsrum dam </label>
+                <input type="checkbox" id="extra4" name="extra4" value="rack">
+                <label for="extra4"> Hyra av racket </label>
+                <label for="bollar">Köpa extra bollar:</label>
+                <select id="bollar" name="bollar">
+                    <option value="WRG">Wilson Roland</option>
+                    <option value="WUSO">Wilson US</option>
+                    <option value="HR">Head Reset</option>
+                </select>
+            </fieldset>
+            <br>
+            <input class="submit" type="submit" value="Boka">
+            <input class="reset" type="reset" value="Rensa">
+        </form>
+    </section>
+    <section>
+        <table class="prislista">
+            <tr class="rubrik">
+                <div class="rubrikdiv">prislista</div>
+            </tr>
+            <tr>
+                <th>Våra banor</th>
+            </tr>
+            <tr>
+                <td>Gräs</td>
+                <td>195:-/h</td>
+            </tr>
+            <tr>
+                <td>Grus</td>
+                <td>150:-/h</td>
+            </tr>
+            <tr>
+                <td>HardCourt</td>
+                <td>120:-/h</td>
+            </tr>
+            <tr>
+                <th>Utrustning</th>
+            </tr>
+            <tr>
+                <td>Tennisracket</td>
+                <td>40:-/omgång</td>
+            </tr>
+            <tr>
+                <td>Wilson Roland Garros all Ct</td>
+                <td>100:-/rör</td>
+            </tr>
+            <tr>
+                <td>Wilson US Open</td>
+                <td>80:-/rör</td>
+            </tr>
+            <tr>
+                <td>Head Reset</td>
+                <td>70:-/rör</td>
+            </tr>
+
+
+        </table>
+    </section>
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+    </body>
 </html>

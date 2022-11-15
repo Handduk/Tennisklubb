@@ -1,96 +1,192 @@
-/*Index*/
-body{
-margin:0;
-background-color: rgb(255, 255, 255);
-color: black;
-height: 1000px;
-font-family: Arial, Helvetica, sans-serif;
-
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
 }
-.menu{
-    
-    color: rgb(0, 0, 0);
+.header{
+    min-height: 50vh;
     width: 100%;
-    border-style: solid;
-    border-top: 0px;
-    border-left:0px;
-    border-right: 0px;
-    
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(bilder/tennis-bana.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
 }
-.bild>img{
-width: 100%;
-height: 100%;
-background-size: cover;
-object-fit:none;
-
-}
-.bild{
-    height: 500px;
-}
-.välkommen{
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: 600;
-    font-size: 4vw;
-    color: black;
-    text-align:center;
-}
-.slogan{
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: 600;
-    font-size: 2vw;
-    color:rgb(0, 0, 0);
-    text-align:center;
-}
-.boka-tid{
+nav{
     display: flex;
-    position:absolute;
-    text-align: center;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 120px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #e2001a;
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.header-text{
+    width: 90%;
+    color: white;
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    border-style: solid;
-    background-color: yellow;
-    border-color: yellow;
-    border-radius: 10%;
+    transform: translate(-50%,-50%);
+    text-align: center;
 }
-
-a:link, a:visited{
-    text-decoration: none;
-    color:black;
-    padding: 1em;
+.header-text h1{
+    font-size: 62px;
+}
+.header-text p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: white;
+}
+.forms{
+    text-align: center;
+}
+.forms fieldset{
+    background: rgba(255, 167, 167, 0.455);
+    border: 1px solid black;
     display: inline-block;
-    
+    width: 90%;
+}
+.submit{
+    background: #e2001a;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 12px 34px;
+    font-size: 13px;
+    margin: 5px;
+    height: 50px;
+    font-size: large;
+}
+.submit:hover{
+    border: 1px solid black;
+    color: black;
+    background: #c3ff009a;
+    transition: 0.5s;
+}
+.reset{
+    background: #e2001a;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 12px 34px;
+    font-size: 13px;
+    margin: 5px;
+    height: 50px;
+    font-size: large;
+}
+.reset:hover{
+    border: 1px solid black;
+    color: black;
+    background: #c3ff009a;
+    transition: 0.5s;
+}
+table.prislista{
+    background: rgba(255, 167, 167, 0.455);
+    border: 1px solid black;
+    width: 35%;
+    margin-left: 5%;
+    margin-right: auto;
+    text-align: left;
+}
+.rubrik{
+    height: 70px;
+}
+.rubrikdiv{
+    font-size: 35px;
+    font-weight: 600;
+    padding-top: 10px;
+    width: 45%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
-a:hover{
-    color: rgba(0, 0, 0, 0.498);
-}
-a:active{
-    text-decoration: none;
-    color:white;
-}
-.om{
-    text-align: center;
-}
-.break{
-    height: 200px;
-}
-.anl{
-    text-align: center;
-}
-/*omkl*/
-.info{
-    text-align: center;
+
+@media(max-width: 700px){
+    .header-text h1{
+        margin-top: 120px;
+        font-size: 25px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #e2001a;
+        height: 100vh;
+        width: 150px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav .fa-solid{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding:30px;
+    }
+    .submit{
+        margin: 10px;
+        height: 50px;
+        font-size: large;
+    }
+    .reset{
+        margin: 10px;
+        height: 50px;
+        font-size: large;
+    }
+    table.prislista{
+        width: 90%;
+    }
+    .rubrikdiv{
+        font-size: 30px;
+    }
+    table .prislista{
+        margin-left: 10px;
+    }
+    .forms fieldset{
+        table-layout: fixed;
+        text-align: left;
+        margin: 12px;
+    }
+    .extra{
+        font-size: large;
+        table-layout: auto;
+        float: none;
+    }
     
-}
-/*Bokning*/
-.bokning{
-    font-size: 2vw;
-    text-align: center;
+
 }

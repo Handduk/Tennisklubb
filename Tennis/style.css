@@ -18,7 +18,7 @@ nav{
     align-items: center;
 }
 nav img{
-    width: 150px;
+    width: 120px;
 }
 .nav-links{
     flex: 1;
@@ -89,7 +89,11 @@ nav .fa-solid{
 
 @media(max-width: 700px){
     .header-text h1{
+        margin-top: 120px;
         font-size: 20px;
+    }
+    .bokning-knapp{
+        bottom: 35px;
     }
     .nav-links ul li{
         display: block;
