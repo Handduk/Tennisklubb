@@ -32,53 +32,83 @@
     <p>Välj bland våra populära banor....</p>
 </div>
     </section>
-    <section class="forms">
-        <form action="/action_page.php">
-            <fieldset>
-                <legend>Boka bana</legend>
-                <label for="bana">Välj bana:</label>
-                <select id="bana" name="bana">
-                    <option value="gräs">Gräs</option>
-                    <option value="grus">Grus</option>
-                    <option value="hardCourt">HardCourt</option>
-                </select><br>
-                <label for="datum">Datum:</label>
+    <section class="formss">
+        <div class="formcontainer">
+            <div class="row">
+                <div class="col-25">
+                    <label for="val">Bana</label>
+                </div>
+                <div class="row-75">
+                    <select id="bana" name="bana">
+                        <option value="gräs">Gräs</option>
+                        <option value="grus">Grus</option>
+                        <option value="hardCourt">HardCourt</option>    
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">Förnamn</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="förnamn" placeholder="Anders">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="ename">Efternamn</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="ename" name="efternamn" placeholder="Andersson">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="telnr">Mobilnummer</label>
+                </div>
+                <input type="tel" id="nummer" name="nummer" placeholder="07X-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="datum">Datum</label>
+                </div>
                 <input type="date" id="datum" name="datum">
-                <br>
-                <label for="tid">Tid:</label>
-                <input type="time" id="tid" name="tid">
-                <br>
-                <label for="fnamn">Förnamn:</label>
-                <input type="text" id="fnamn" name="fnamn" placeholder="Anders" size="15">
-                <br>
-                <label for="enamn">Efternamn:</label>
-                <input type="text" id="enamn" name="enamn" placeholder="Andersson" size="15">
-                <br>
-                <label for="nummer">TelNummer:</label>
-                <input type="tel" id="nummer" name="nummer" placeholder="123 456 7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="12">
-            </fieldset>
-            <br>
-            <fieldset class="extra">
-                <legend>Extra</legend>
-                <input type="checkbox" id="extra1" name="extra1" value="bastu">
-                <label for="extra1"> Boka bastu </label>
-                <input type="checkbox" id="extra2" name="extra2" value="omklh">
-                <label for="extra2"> Boka omklädningsrum herr </label>
-                <input type="checkbox" id="extra3" name="extra3" value="omkld">
-                <label for="extra3"> Boka omklädningsrum dam </label>
-                <input type="checkbox" id="extra4" name="extra4" value="rack">
-                <label for="extra4"> Hyra av racket </label>
-                <label for="bollar">Köpa extra bollar:</label>
-                <select id="bollar" name="bollar">
-                    <option value="WRG">Wilson Roland</option>
-                    <option value="WUSO">Wilson US</option>
-                    <option value="HR">Head Reset</option>
-                </select>
-            </fieldset>
-            <br>
-            <input class="submit" type="submit" value="Boka">
-            <input class="reset" type="reset" value="Rensa">
-        </form>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="tid">Tid</label>
+                </div>
+                <div class="col-75">
+                    <input type="time" id="tid" name="tid">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-90">
+                    <label for="bastu">Boka bastu</label>
+                    <input type="checkbox" id="bastu" name="bastu" value="bastu">
+                    <label for="omklHerr">Boka omklädningsrum herr</label>
+                    <input type="checkbox" id="omklHerr" name="omklHerr" value="omklHerr">
+                    <label for="omklDam">Boka omklädningsrum dam</label>
+                    <input type="checkbox" id="omklDam" name="omklDam" value="omklDam">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-90">
+                    <label for="hyraRacket">Hyra av racket</label>
+                    <input type="checkbox" id="hyraRacket" name="hyraRacket" value="hyraRacket">
+                    <label for="bollar">Köpa extra bollar</label>
+                    <select id="bollar" name="bollar">
+                        <option value="WRG">Wilson Roland</option>
+                        <option value="WUSO">Wilson US</option>
+                        <option value="HR">Head Reset</option>
+                    </select>
+
+                </div>
+            <div class="row">
+                <input type="submit" value="Boka">
+                <input type="reset" value="Rensa">
+            </div>
+        </div>
     </section>
     <section>
         <table class="prislista">
