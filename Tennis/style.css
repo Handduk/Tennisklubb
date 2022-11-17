@@ -146,25 +146,107 @@ p{
     display: flex;
     justify-content: space-between;
 }
-.info-column{
+
+.info-column1{
     flex-basis: 31%;
-    background: rgba(255, 167, 167, 0.455);
+    background: white;
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
     transition: 0.3s;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+.info-column2{
+    flex-basis: 31%;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+.info-column3{
+    flex-basis: 31%;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 }
 h3{
     text-align: center;
     font-weight: 600;
     margin: 10px 0;
 }
-.info-column:hover{
-    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+.info-column1:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.5);
+    background-color: #c3ff009a;
+    
 }
+
+.info-column2:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.5);
+    background-color: #1994ff9a;
+    
+}
+
+.info-column3:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.5);
+    background-color: #ffa6009a;
+    
+}
+
+.footer{
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    left: 0;
+    bottom:0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+}
+
+.footerlinks{
+    flex: 1;
+    text-align: left;
+}
+
+.footerlinks a{
+    text-decoration: none;
+    color: black;
+}
+
+.footerlinks li{
+    width: 22%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 8px 12px;
+    position: relative;
+    color: black;
+}
+
+.footerlinks::after a{
+    list-style: none;
+    color: black;
+}
+
 @media(max-width: 700px){
     .rad{
         flex-direction: column;
     }
+
+    .info-column{
+        box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    }
+
 }

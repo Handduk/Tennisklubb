@@ -109,47 +109,52 @@ label{
 
 input[type=submit]{
     background-color: #e2001a;
-    color: black;
+    color: white;
     padding: 12px 20px;
     border: 1px solid black;
     border-radius: 4px;
     cursor: pointer;
     float: left;
     font-size: large;
-    margin-left: 30%;
+    justify-content: center;
     margin-top: 10px;
+    margin-left: 10%;
+    width: 25%;
 }
 
 
 input[type=submit]:hover{
     background-color: #c3ff009a;
+    color: black;
     transition: 0.5s;
 }
 
 input[type=reset]{
     background-color: #e2001a;
-    color: black;
+    color: white;
     padding: 12px 20px;
     border: 1px solid black;
     border-radius: 4px;
     cursor: pointer;
     float: right;
     font-size: large;
-    margin-right: 30%;
     margin-top: 10px;
+    margin-right: 10%;
+    width: 25%;
 }
 
 input[type=reset]:hover{
     background-color: #c3ff009a;
+    color: black;
     transition: 0.5s;
 }
 
 .formcontainer{
     margin: 5%;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: rgba(255, 167, 167, 0.455);
+    border-radius: 10px;
+    background-color: white;
     padding: 20px;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 }
 
 .col-25{
@@ -173,6 +178,12 @@ input[type=reset]:hover{
     justify-content: space-between;
 }
 
+.row-buttons:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .row:after {
     content: "";
     display: table;
@@ -180,12 +191,15 @@ input[type=reset]:hover{
   }
 
 table.prislista{
-    background: rgba(255, 167, 167, 0.455);
-    border: 1px solid black;
+    background: white;
     width: 35%;
     margin-left: 5%;
+    padding: 10px;
     margin-right: auto;
+    margin-bottom: 20px;
     text-align: left;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 }
 
 .rubrik{
@@ -204,6 +218,43 @@ table.prislista{
     justify-content: center;
 }
 
+.footer{
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    left: 0;
+    bottom:0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+
+.footerlinks{
+    flex: 1;
+    text-align: left;
+}
+
+.footerlinks a{
+    text-decoration: none;
+    color: black;
+}
+
+.footerlinks li{
+    width: 22%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 8px 12px;
+    position: relative;
+    color: black;
+}
+
+.footerlinks::after a{
+    list-style: none;
+    color: black;
+}
 
 @media(max-width: 700px){
     .header-text h1{
@@ -262,9 +313,24 @@ table.prislista{
         width: 100%;
     }
 
-    input[type=submit], input[type=reset]{
+    input[type=submit]{
         width: 100%;
         margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    input[type=reset]{
+        width: 100%;
+        margin-top: 10px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .knapp{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+
     }
     
     table.prislista{
