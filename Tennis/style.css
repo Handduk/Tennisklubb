@@ -33,7 +33,7 @@ nav img{
 .nav-links ul li a{
     color: white;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 18px;
 }
 .nav-links ul li::after{
     content: '';
@@ -61,7 +61,7 @@ nav img{
 }
 .header-text p{
     margin: 10px 0 40px;
-    font-size: 14px;
+    font-size: 18px;
     color: white;
 }
 .bokning-knapp{
@@ -72,7 +72,7 @@ nav img{
     border: 1px solid white;
     border-radius: 10px;
     padding: 12px 34px;
-    font-size: 13px;
+    font-size: 18px;
     position: relative;
     cursor: pointer;
 }
@@ -133,9 +133,14 @@ h1{
     font-size: 36px;
     font-weight: 600;
 }
+
+h3 {
+    font-size: 36px;
+}
+
 p{
     color: black;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 300;
     line-height: 22px;
     padding: 10px;
@@ -203,41 +208,56 @@ h3{
 }
 
 .footer{
+    height: 100px;
     display: flex;
-    padding: 0;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
     left: 0;
     bottom:0;
-    width: 100%;
     background-color: white;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 -10px 10px -10px rgba(0,0,0,0.5);
 }
 
-.footerlinks{
-    flex: 1;
-    text-align: left;
+.footerlinks {
+    height: fit-content;
 }
 
-.footerlinks a{
+.footerlinks ul {
+    margin-top: 20px;
+    list-style: none;
+    height: fit-content;
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    margin-left: 5%;
+    justify-content: space-between;
+}
+
+.footerlinks a {
+
+    font-size: 18px;
     text-decoration: none;
     color: black;
 }
 
-.footerlinks li{
-    width: 22%;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    padding: 8px 12px;
-    position: relative;
-    color: black;
+.footerlinks ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #e2001a;
+    display: block;
+    margin: auto;
+    transition: 0.3s;
 }
 
-.footerlinks::after a{
-    list-style: none;
-    color: black;
+.footerlinks, ul li:hover::after {
+    width: 100%;
+}
+
+.footertext {
+    position: absolute;
+    text-align: center;
+    height: fit-content;
+    width: 100%;
+
 }
 
 @media(max-width: 700px){
@@ -247,6 +267,21 @@ h3{
 
     .info-column{
         box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    }
+
+    .footerlinks ul {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .footerlinks li {
+        margin: 10px;
+    }
+
+    .footertext {
+        color: rgb(29, 29, 29);
+        margin-top: 35%;
     }
 
 }
