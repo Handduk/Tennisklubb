@@ -90,10 +90,6 @@ function saveBokForm(event) {
 
       allaBokningar = JSON.parse(localStorage.getItem("allaBokningar"));
 
-
-      let bastuBox = document.getElementById("bastu");
-      localStorage.setItem("bastu", bastu.checked);
-      
       //Lagrar data från formuläret in i objektet bokFormData
       //ex: bokFormData.fname innehåller förnamn
       const bokFormData = {
@@ -104,7 +100,6 @@ function saveBokForm(event) {
         datum: document.getElementById("datum").value,
         tid: document.getElementById("tid").value,
         bollar: document.getElementById("bollar").value,
-        bastu: bastuBox,
         bokning: "TennisBana",
         
       };
