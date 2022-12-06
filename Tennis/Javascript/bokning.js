@@ -84,11 +84,15 @@ function saveBokForm(event) {
         return;
       }
 
+      let allaBokningar = new Array();
+
+      allaBokningar = JSON.parse(localStorage.getItem("allaBokningar"));
+
     //Lagrar data från formuläret in i objektet bokFormData
     //ex: bokFormData.fname innehåller förnamn
     const bokFormData = {
         bana: document.getElementById("bana").value,
-        fname: document.getElementById("fname").value,
+        förNamn: document.getElementById("fname").value,
         efterNamn: document.getElementById("ename").value,
         nummer: document.getElementById("nummer").value,
         datum: document.getElementById("datum").value,
