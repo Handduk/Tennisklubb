@@ -51,7 +51,7 @@
                     <label for="fname">Förnamn</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="fname" name="förnamn" placeholder="Anders">
+                    <input type="text" id="fname" name="förnamn" placeholder="Anders" required />
                 </div>
             </div>
             <div class="row">
@@ -66,7 +66,7 @@
                 <div class="col-25">
                     <label for="telnr">Mobilnummer</label>
                 </div>
-                <input type="tel" id="nummer" name="nummer" placeholder="07X-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                <input type="tel" id="nummer" name="nummer" placeholder="07X-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="10">
             </div>
             <div class="row">
                 <div class="col-25">
@@ -85,19 +85,20 @@
             <div class="row">
                 <div class="col-90">
                     <label for="bastu">Boka bastu</label>
-                    <input type="checkbox" id="bastu" name="bastu" value="bastu">
+                    <input type="checkbox" id="bastu" name="bastu">
                     <label for="omklHerr">Boka omklädningsrum herr</label>
-                    <input type="checkbox" id="omklHerr" name="omklHerr" value="omklHerr">
+                    <input type="checkbox" id="omklHerr" name="omklHerr">
                     <label for="omklDam">Boka omklädningsrum dam</label>
-                    <input type="checkbox" id="omklDam" name="omklDam" value="omklDam">
+                    <input type="checkbox" id="omklDam" name="omklDam">
                 </div>
             </div>
             <div class="row">
                 <div class="col-90">
                     <label for="hyraRacket">Hyra av racket</label>
-                    <input type="checkbox" id="hyraRacket" name="hyraRacket" value="hyraRacket">
+                    <input type="checkbox" id="hyraRacket" name="hyraRacket">
                     <label for="bollar">Köpa extra bollar</label>
                     <select id="bollar" name="bollar">
+                        <option value="WRG">(none)</option>
                         <option value="WRG">Wilson Roland</option>
                         <option value="WUSO">Wilson US</option>
                         <option value="HR">Head Reset</option>
@@ -105,8 +106,8 @@
                 </div>
         </div>
         <div class="row knapp">
-                <input type="submit" value="Boka">
-                <input type="reset" value="Rensa">
+                <input type="submit" value="Boka" onclick="saveBokForm(event)" />
+                <input type="reset" value="Rensa" />
         </div>
     </section>
     <section>
@@ -167,17 +168,7 @@
             Sida gjord av Martin Karlsson 2022
         </div>
     </section>
-    
-    <script>
-
-        var navLinks = document.getElementById("navLinks");
-        function showMenu(){
-            navLinks.style.right = "0";
-        }
-        function hideMenu(){
-            navLinks.style.right = "-200px";
-        }
-
-    </script>
+    <script src="Javascript\Menu.js"></script>
+    <script src="Javascript\bokning.js"></script>
     </body>
 </html>
