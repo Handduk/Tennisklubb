@@ -78,9 +78,11 @@ function validering() {
 
 }
 
+
+
 //LocalStorage
 function saveBokForm(event) {
-    if (!validering()) {
+      if (!validering()) {
         return;
       }
 
@@ -88,9 +90,13 @@ function saveBokForm(event) {
 
       allaBokningar = JSON.parse(localStorage.getItem("allaBokningar"));
 
-    //Lagrar data från formuläret in i objektet bokFormData
-    //ex: bokFormData.fname innehåller förnamn
-    const bokFormData = {
+
+      let bastuBox = document.getElementById("bastu");
+      localStorage.setItem("bastu", bastu.checked);
+      
+      //Lagrar data från formuläret in i objektet bokFormData
+      //ex: bokFormData.fname innehåller förnamn
+      const bokFormData = {
         bana: document.getElementById("bana").value,
         förNamn: document.getElementById("fname").value,
         efterNamn: document.getElementById("ename").value,
@@ -98,7 +104,9 @@ function saveBokForm(event) {
         datum: document.getElementById("datum").value,
         tid: document.getElementById("tid").value,
         bollar: document.getElementById("bollar").value,
+        bastu: bastuBox,
         bokning: "TennisBana",
+        
       };
 
       //Lagrar checkboxes från formuläret i egna objekt
@@ -139,8 +147,6 @@ function saveBokForm(event) {
 
       localStorage.setItem("bokningar", JSON.stringify(bokningarArray));
 
-      console.log(localStorage.getItem("bokningar")
-      );
-    console.log(JSON.parse(localStorage.getItem("bokningar")));
-    window.location.href = "dinBokning.html";
+      console.log(JSON.parse(localStorage.getItem("bokningar")));
+      window.location.href = "dinBokning.html";
 }
