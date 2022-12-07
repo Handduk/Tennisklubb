@@ -78,70 +78,103 @@ function validering() {
 
 }
 
-
-
 //LocalStorage
 function saveBokForm(event) {
+
       if (!validering()) {
         return;
       }
 
-      let allaBokningar = new Array();
-
-      allaBokningar = JSON.parse(localStorage.getItem("allaBokningar"));
-
-      //Lagrar data från formuläret in i objektet bokFormData
-      //ex: bokFormData.fname innehåller förnamn
-      const bokFormData = {
-        bana: document.getElementById("bana").value,
-        förNamn: document.getElementById("fname").value,
-        efterNamn: document.getElementById("ename").value,
-        nummer: document.getElementById("nummer").value,
-        datum: document.getElementById("datum").value,
-        tid: document.getElementById("tid").value,
-        bollar: document.getElementById("bollar").value,
-        bokning: "TennisBana",
-        
-      };
-
-      //Lagrar checkboxes från formuläret i egna objekt
-      let checkBox = document.getElementById("bastu");
-      localStorage.setItem("bastu", bastu.checked);
-
-      checkBox = document.getElementById("omklHerr");
-      localStorage.setItem("omklHerr", checkBox.checked);
-
-      checkBox = document.getElementById("omklDam");
-      localStorage.setItem("omklDam", checkBox.checked);
-
-      checkBox = document.getElementById("hyraRacket");
-      localStorage.setItem("hyraRacket", checkBox.checked);
-
-      //Kontrollerar om boxarna är itryckta eller inte när man trycker på boka knappen
-      let checked = JSON.parse(localStorage.getItem("bastu"));
-        document.getElementById("bastu").checked = checked;
-
-      checked = JSON.parse(localStorage.getItem("omklHerr"));
-        document.getElementById("omklHerr").checked = checked;
-
-      checked = JSON.parse(localStorage.getItem("omklDam"));
-        document.getElementById("omklDam").checked = checked;
-
-      checked = JSON.parse(localStorage.getItem("hyraRacket"));
-        document.getElementById("hyraRacket").checked = checked;
-
-
       let bokningarArray = new Array();
 
-      if (localStorage.getItem("bokningar")) {
-        bokningarArray = JSON.parse(localStorage.getItem("bokningar"));
+      const formData = {
+        Bana: document.getElementById("bana").value,
+        FörNamn: document.getElementById("fname").value,
+        EfterNamn: document.getElementById("ename").value,
+        Nummer: document.getElementById("nummer").value,
+        Datum: document.getElementById("datum").value,
+        Tid: document.getElementById("tid").value,
+        Bollar: document.getElementById("bollar").value,
+        Bastu: document.getElementById("bastu").checked,
+        OmklädningsrumHerr: document.getElementById("omklHerr").checked,
+        OmklädningsrumDam: document.getElementById("omklDam").checked,
+        RacketHyra: document.getElementById("hyraRacket").checked,
+        bokning: "TennisBana",
       }
 
-      bokningarArray.push(bokFormData);
-      bokningarArray.push(checkBox);
+      if (localStorage.getItem("bokning")) {
+        allaAnvandareArray = JSON.parse(localStorage.getItem("bokning"));
+      }
 
-      localStorage.setItem("bokningar", JSON.stringify(bokningarArray));
+      bokningarArray.push(formData);
+      
+      localStorage.setItem("bokning", JSON.stringify(bokningarArray));
+      
 
-      console.log(JSON.parse(localStorage.getItem("bokningar")));
-      window.location.href = "dinBokning.html";
+      console.log(JSON.parse(localStorage.getItem("bokning")));
+
+      const anvandarData = document.getElementById("anvandarData");
+
+      let tableArray = new Array();
+
+      tableArray = JSON.parse(localStorage.getItem("bokning"));
+
+      const senasteBokningen = tableArray.pop();
+
+    const värden = [
+        senasteBokningen.Bana,
+        senasteBokningen.FörNamn,
+        senasteBokningen.EfterNamn,
+        senasteBokningen.Nummer,
+        senasteBokningen.Datum,
+        senasteBokningen.Tid,
+        senasteBokningen.Bollar,
+        senasteBokningen.Bastu,
+        senasteBokningen.OmklädningsrumHerr,
+        senasteBokningen.OmklädningsrumDam,
+        senasteBokningen.RacketHyra,
+    ];
+
+    const dataNamn = [
+        "Bana:",
+        "Förnamn:",
+        "Efternamn:",
+        "Mobilnummer:",
+        "Datum:",
+        "Tid:",
+        "Extra bollar:",
+        "Bastu:",
+        "Omklädningsrum Herr:",
+        "Omklädningsrum Dam:",
+        "Hyra av racket:",
+    ];
+
+    const tbl = document.createElement("table");
+    const tblBody = document.createElement("tbody");
+
+    for (let i = 0; i < värden.length; i++) {
+        const element = värden[i];
+        const row = document.createElement("tr");
+
+        const dataText = document.createTextNode(dataNamn[i]);
+        const dataCell = document.createElement("td");
+        dataCell.appendChild(dataText);
+
+        const text = document.createTextNode(värden[i]);
+        const cell = document.createElement("td");
+        cell.appendChild(text);
+        if (!(i == 4)) {
+            cell.classList.add("capitalize");
+        }
+
+        row.appendChild(dataCell);
+        row.appendChild(cell);
+
+        tblBody.appendChild(row);
+
+    }
+
+    tbl.appendChild(tblBody);
+
+    anvandarData.appendChild(tbl);
 }

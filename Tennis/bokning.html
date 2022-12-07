@@ -66,7 +66,7 @@
                 <div class="col-25">
                     <label for="telnr">Mobilnummer</label>
                 </div>
-                <input type="tel" id="nummer" name="nummer" placeholder="07X-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="10">
+                <input type="tel" id="nummer" name="nummer" placeholder="07X-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="10" maxlength="10">
             </div>
             <div class="row">
                 <div class="col-25">
@@ -109,6 +109,10 @@
                 <input type="submit" value="Boka" onclick="saveBokForm(event)" />
                 <input type="reset" value="Rensa" />
         </div>
+    </section>
+    <section>
+        <form class="bokForm" onsubmit="return false">
+        <div id="anvandarData"></div>
     </section>
     <section>
         <table class="prislista">
