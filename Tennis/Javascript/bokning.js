@@ -78,6 +78,12 @@ function validering() {
 
 }
 
+let hideResult = document.getElementById("anvandarData");
+hideResult.style.display = "none";
+
+let hideText = document.getElementById("dinBokning");
+hideText.style.display = "none";
+
 //LocalStorage
 function saveBokForm(event) {
 
@@ -177,4 +183,21 @@ function saveBokForm(event) {
     tbl.appendChild(tblBody);
 
     anvandarData.appendChild(tbl);
+
+    if (hideResult.style.display === "none") {
+        hideResult.style.display = "flex";
+    }
+    else {
+        hideResult.style.display = "none";
+    }
+
+    if (hideText.style.display === "none") {
+        hideText.style.display = "flex";
+    }
+    else {
+        hideText.style.display = "none";
+    }
+
+    const element = document.getElementById("anvandarData");
+    element.scrollIntoView({behavior: "smooth"});
 }

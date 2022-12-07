@@ -188,11 +188,17 @@ input[type=reset]:hover{
     content: "";
     display: table;
     clear: both;
-  }
+}
+
+.bokForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 table.prislista{
     background: white;
-    width: 35%;
+    width: 40%;
     margin-left: 5%;
     padding: 10px;
     margin-right: auto;
@@ -201,6 +207,28 @@ table.prislista{
     border-radius: 10px;
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 }
+
+#anvandarData {
+    background: white;
+    width: 40%;
+    margin-right: 5%;
+    padding: 10px;
+    margin-left: auto;
+    margin-bottom: 20px;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+#anvandarData table {
+    width: 100%;
+    padding-top: 15%;
+}
+
+#anvandarData tr {
+    font-size: 16px;
+}
+
 
 
 .rubrik{
@@ -212,6 +240,19 @@ table.prislista{
     font-weight: 600;
     padding-top: 10px;
     width: 45%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#dinBokning {
+    font-size: 35px;
+    font-weight: 600;
+    padding-top: 10px;
+    width: 100%;
+    margin-left: 25%;
     position: absolute;
     display: flex;
     flex-direction: row;
