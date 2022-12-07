@@ -196,6 +196,12 @@ input[type=reset]:hover{
     justify-content: space-between;
 }
 
+.prislista {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 table.prislista{
     background: white;
     width: 40%;
@@ -209,6 +215,9 @@ table.prislista{
 }
 
 #anvandarData {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     background: white;
     width: 40%;
     margin-right: 5%;
@@ -228,8 +237,6 @@ table.prislista{
 #anvandarData tr {
     font-size: 16px;
 }
-
-
 
 .rubrik{
     height: 70px;
@@ -391,10 +398,19 @@ table.prislista{
     }
     
     table.prislista{
+        width: 100%;
+        flex-direction: column ;
+    }
+
+    #dinBokning {
+        flex-direction: column;
+        justify-content: center;
         width: 90%;
     }
 
     .rubrikdiv{
+        flex-direction: column;
+        justify-content: center;
         font-size: 30px;
     }
 
