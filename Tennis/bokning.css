@@ -204,7 +204,7 @@ input[type=reset]:hover{
 
 table.prislista{
     background: white;
-    width: 40%;
+    width: 35%;
     margin-left: 5%;
     padding: 10px;
     margin-right: auto;
@@ -219,7 +219,7 @@ table.prislista{
     flex-direction: row;
     justify-content: space-between;
     background: white;
-    width: 40%;
+    width: 35%;
     margin-right: 5%;
     padding: 10px;
     margin-left: auto;
@@ -246,7 +246,8 @@ table.prislista{
     font-size: 35px;
     font-weight: 600;
     padding-top: 10px;
-    width: 45%;
+    margin-left: 5%;
+    width: 35%;
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -258,8 +259,8 @@ table.prislista{
     font-size: 35px;
     font-weight: 600;
     padding-top: 10px;
-    width: 100%;
-    margin-left: 25%;
+    width: 35%;
+    margin-left: 60%;
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -397,25 +398,28 @@ table.prislista{
 
     }
     
+    .bokForm {
+        flex-direction: column;
+    }
+
     table.prislista{
-        width: 100%;
-        flex-direction: column ;
+        width: 90%;
+    }
+
+    #anvandarData {
+        flex-direction: column;
+        width: 90%;
     }
 
     #dinBokning {
-        flex-direction: column;
-        justify-content: center;
+        margin-left: 5%;
+        margin-top: 90%;
         width: 90%;
     }
 
     .rubrikdiv{
-        flex-direction: column;
-        justify-content: center;
+        width: 90%;
         font-size: 30px;
-    }
-
-    table .prislista{
-        margin-left: 10px;
     }
 
     .forms fieldset{
