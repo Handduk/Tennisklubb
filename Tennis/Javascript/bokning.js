@@ -112,6 +112,11 @@ function saveBokForm(event) {
         allaAnvandareArray = JSON.parse(localStorage.getItem("bokning"));
       }
 
+
+      if (document.getElementById("bastu").checked === "true") {
+        "bastu".checked = "ja";
+      }
+
       bokningarArray.push(formData);
       
       localStorage.setItem("bokning", JSON.stringify(bokningarArray));
