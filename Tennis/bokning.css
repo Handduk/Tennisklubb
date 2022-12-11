@@ -118,36 +118,15 @@ input[type=submit]{
     border: 1px solid black;
     border-radius: 4px;
     cursor: pointer;
-    float: left;
     font-size: large;
     justify-content: center;
     margin-top: 10px;
-    margin-left: 10%;
+    margin-left: 3%;
     width: 25%;
 }
 
 
 input[type=submit]:hover{
-    background-color: #c3ff009a;
-    color: black;
-    transition: 0.5s;
-}
-
-input[type=reset]{
-    background-color: #e2001a;
-    color: white;
-    padding: 12px 20px;
-    border: 1px solid black;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-    font-size: large;
-    margin-top: 10px;
-    margin-right: 10%;
-    width: 25%;
-}
-
-input[type=reset]:hover{
     background-color: #c3ff009a;
     color: black;
     transition: 0.5s;
@@ -331,7 +310,7 @@ table.prislista{
         max-width: 100% !important;
         overflow-x: hidden !important;
     }
-    
+
     .header-text h1{
         margin-top: 120px;
         font-size: 25px;
